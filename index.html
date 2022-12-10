@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/styles/reset.scss">
+  <link rel="stylesheet" href="src/styles/index.scss">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+
+<body>
+  <section class="top-container">
+    <div class="top-section">
+      <div class="back-card">
+        <p id="cvcBackCard">000</p>
+      </div>
+      <div class="front-card">
+        <img src="public/images/card-logo.svg" alt="logo">
+        <p id="cardNumberRef">0000 0000 0000 0000</p>
+        <span>
+          <p id="front-cardName">Jane Appleseed</p>
+          <div id="front-cardDate">
+            <p id="front-card-month">00</p>
+            <p>/</p>
+            <p id="front-card-year">00</p>
+          </div>
+        </span>
+      </div>
+    </div>
+  </section>
+  <main class="main-container">
+    <form class="bottom-section " id="form">
+      <label for="cardName">Card Holdername</label>
+      <input required type="text" placeholder="e.g. Jane Appleseed" id="cardName" pattern="^(?<! )[-a-zA-Z' ]{2,26}" maxlength="26" title="Card holder Name">
+      <label for="Card Numbers">Card Number</label>
+      <input required type="text" placeholder="1234 5678 9123 0000" id="cardNumber" pattern="^[0-9]*$" minlength="16"
+        maxlength="16" title="Holder Name">
+      <section class="bottom-data">
+        <div>
+          <span class="label" for="cardMonth">Exp. Date (MM/YY)</span>
+          <div class="date">
+            <input required type="text" placeholder="MM" id="cardMonth" pattern="^[0-9]*$" minlength="2" maxlength="2" title="Month writen in yout card">
+            <input required type="text" placeholder="YY" id="cardYear" pattern="^[0-9]*$" minlength="2" maxlength="2" title="Year writen in yout card">
+          </div>
+        </div>
+        <div class="cvc">
+          <span class="label" for="CVC">CVC</span>
+          <input required type="text" placeholder="e.g. 123" id="cvc" pattern="^[0-9]*$" minlength="3" maxlength="3" title="the '3' numbers on the back of your card">
+        </div>
+      </section>
+      <button type="submit" class="confirm-btn">
+        Confirm
+      </button>
+    </form>
+
+    <section class="bottom-section hide" id="complete-section">
+      <div class="complete-container">
+        <img src="public/images/icon-complete.svg" alt="Icon complete" class="complete-img">
+        <h1 class="complete-title">Thank you!</h1>
+        <p class="complete-subtitle">We've added your card details</p>
+        <button type="submit" class="confirm-btn">Continue</button>
+      </div>
+    </section>
+
+
+
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/devdartagnan">DevDartagnan</a>.
+    </div>
+  </main>
+  <script type="module" src="src/index.ts"></script>
+</body>
+
+</html>

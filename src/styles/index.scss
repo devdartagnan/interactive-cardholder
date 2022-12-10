@@ -1,0 +1,240 @@
+$Linear-gradient : hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+$Red : hsl(0, 100%, 66%);
+$White: hsl(0, 0%, 100%);
+$Light-grayish-violet: hsl(270, 3%, 87%);
+$Dark-grayish-violet: hsl(279, 6%, 55%);
+$Verydark-violet: hsl(278, 68%, 11%);
+
+body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-family: 'Space Grotesk', sans-serif;
+    text-transform: uppercase;
+}
+
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    max-width: 550px;
+}
+
+.top-container {
+    background-image: url("../../public/images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.top-section {
+    height: 225px;
+    position: relative;
+    width: 375px;
+
+    .back-card {
+        background-image: url("../../public/images/bg-card-back.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        color: $White;
+        height: 152px;
+        position: absolute;
+        right: 16px;
+        top: 20px;
+        width: 275px;
+
+        p {
+            margin-top: 25%;
+            margin-left: 78%;
+        }
+    }
+
+    .front-card {
+        background-image: url("../../public/images/bg-card-front.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        bottom: -30px;
+        color: $White;
+        height: 152px;
+        left: 24px;
+        padding: 16px;
+        position: absolute;
+        width: 275px;
+
+        img {
+            margin-bottom: 2rem;
+            width: 60px;
+        }
+
+        #cardNumberRef {
+            font-size: 15px;
+            letter-spacing: 4px;
+            margin-bottom: 1.5rem;
+        }
+
+        span {
+            display: flex;
+            font-size: 10px;
+            justify-content: space-between;
+            #front-cardDate{
+                display: flex;
+            }
+        }
+    }
+}
+
+.bottom-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 18px;
+    padding: 50px 16px;
+    text-align: left;
+    width: 100%;
+
+    label {
+        margin-top: 8px;
+    }
+
+    input {
+        border-radius: 5px;
+        border: solid 1px $Light-grayish-violet;
+        height: 35px;
+        text-transform: uppercase;
+        padding-left: 1rem;
+    }
+
+    #cardMonth {
+        width: 60px;
+    }
+
+    #cardYear {
+        width: 60px;
+    }
+
+    .complete-container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+        .complete-img {
+            width: 100px;
+        }
+        .complete-title{
+            color: $Verydark-violet;
+            font-size: 22px;
+        }
+        .complete-subtitle{
+            color: $Dark-grayish-violet;
+            font-size: 12px;
+        }
+        .confirm-btn{
+            width: 200px;
+        }
+    }
+}
+
+.bottom-data {
+    display: flex;
+    margin-top: 8px;
+    gap: 8px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .date {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+        }
+
+    }
+
+}
+
+.cvc {
+    margin-left: 16px;
+}
+
+.confirm-btn {
+    background-color: $Verydark-violet;
+    border: none;
+    border-radius: 5px;
+    color: $White;
+    cursor: pointer;
+    height: 35px;
+    margin-top: 12px;
+}
+
+.hide {
+    display: none;
+}
+
+.attribution {
+    background-color: $Verydark-violet;
+    bottom: 0;
+    color: $White;
+    font-size: 12px;
+    height: 20px;
+    padding-top: 5px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+
+    a {
+        color: $Dark-grayish-violet;
+    }
+
+    a:visited {
+        color: $Dark-grayish-violet;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: auto 1fr;
+        justify-items: center;
+    }
+
+    .top-container {
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+
+        .top-section {
+            .front-card {
+                height: 250px;
+                left: 132px;
+                padding: 32px;
+                top: -40px;
+                width: 80%;
+
+
+                #cardNumberRef {
+                    font-size: 14px;
+                }
+            }
+
+            .back-card {
+                font-size: 14px;
+                height: 250px;
+                left: 180px;
+                top: 150px;
+                width: 80%;
+            }
+        }
+    }
+
+    .bottom-section {
+        margin-left: auto;
+        padding: 0;
+    }
+}
