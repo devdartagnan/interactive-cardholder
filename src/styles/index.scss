@@ -79,7 +79,8 @@ body {
             display: flex;
             font-size: 10px;
             justify-content: space-between;
-            #front-cardDate{
+
+            #front-cardDate {
                 display: flex;
             }
         }
@@ -106,6 +107,7 @@ body {
         text-transform: uppercase;
         padding-left: 1rem;
     }
+    
 
     #cardMonth {
         width: 60px;
@@ -121,23 +123,32 @@ body {
         flex-direction: column;
         gap: 16px;
         text-align: center;
+
         .complete-img {
             width: 100px;
         }
-        .complete-title{
+
+        .complete-title {
             color: $Verydark-violet;
             font-size: 22px;
         }
-        .complete-subtitle{
+
+        .complete-subtitle {
             color: $Dark-grayish-violet;
             font-size: 12px;
         }
-        .confirm-btn{
+
+        .confirm-btn {
             width: 200px;
         }
     }
 }
-
+.inputs:focus{
+    border: $Light-grayish-violet;
+}
+.inputs:active{
+    border: $Light-grayish-violet;
+}
 .bottom-data {
     display: flex;
     margin-top: 8px;
